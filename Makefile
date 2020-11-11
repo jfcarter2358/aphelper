@@ -1,16 +1,20 @@
 .PHONY: bump-major bump-minor bump-patch
 
 bump-major:
-	bumpversion major src/aphelper/VERSION
+	bumpversion major aphelper/VERSION
 
 bump-minor:
-	bumpversion minor src/aphelper/VERSION
+	bumpversion minor aphelper/VERSION
 
 bump-patch:
-	bumpversion patch src/aphelper/VERSION
+	bumpversion patch aphelper/VERSION
 
-pypi:
+pypi-build:
 	python setup.py sdist bdist_wheel
 	twine check dist/*
+
+pypi-test:
 	twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+pypi-upload:
 	twine upload dist/*

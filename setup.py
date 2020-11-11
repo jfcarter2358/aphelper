@@ -3,7 +3,7 @@ import setuptools
 with open("README.md", "r") as f:
     long_description = f.read()
 
-with open("src/aphelper/VERSION", "r") as f:
+with open("aphelper/VERSION", "r") as f:
     version = f.read()
 
 setuptools.setup(
@@ -17,6 +17,5 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/jfcarter2358/aphelper",
     packages=setuptools.find_packages(),
-    python_requires=">=3.7",
-    package_dir={'':'src'}
+    python_requires=">=3.7"
 )
