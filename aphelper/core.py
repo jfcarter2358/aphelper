@@ -1,5 +1,5 @@
 import argparse
-from aphelper import enums, jsonc
+from aphelper import enums
 
 class ArgparseHelper:
     def __init__(self, def_data=None, def_file=None, parent=None):

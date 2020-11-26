@@ -1,1 +1,1 @@
-jsoncparser==0.0.2
+jsoncparser==0.0.6
