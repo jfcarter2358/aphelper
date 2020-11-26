@@ -148,3 +148,5 @@ class ArgparseHelper:
             self.parser.print_help()
         else:
             args.func(args.parser, args)
+        if 'function' in vars(args):
+            args.function(args)
